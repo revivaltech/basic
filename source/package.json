@@ -1,0 +1,7 @@
+{
+  "name": "Revival",
+  "version": "0.1.0",
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  }
+}
