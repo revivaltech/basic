@@ -1,31 +1,23 @@
-var gulp = require('gulp');
-
-gulp.task('express', function() {
-  var express = require('express');
-  var app = express();
-  app.use(require('connect-livereload')({port: 4002}));
-  app.use(express.static(__dirname));
-  app.listen(4000);
-});
-
-
-var tinylr;
-gulp.task('livereload', function() {
-  tinylr = require('tiny-lr')();
-  tinylr.listen(4002);
-});
-
-function notifyLiveReload(event) {
-  var fileName = require('path').relative(__dirname, event.path);
-
-  tinylr.changed({
-    body: {
-      files: [fileName]
-    }
+var  gulp = require('gulp'),
+    watch = require('gulp-watch'),
+  connect = require('gulp-connect');
+ 
+gulp.task('webserver', function() {
+  connect.server({
+    livereload: true
+    /*
+  port: 80,
+  host: 'gulp.dev'
+    */
   });
-}
-
-
-gulp.task('default', ['express', 'livereload'], function() {
-
 });
+
+gulp.task('livereload', function () {
+    gulp.src(['index.html', 'resources/**/*.js'])
+        .pipe(watch(['index.html']))
+        //.pipe(debug({verbose: true}))
+        .pipe(connect.reload());
+});
+
+gulp.task('default', ['webserver', 'livereload']);
+
