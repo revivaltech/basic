@@ -13,7 +13,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('livereload', function () {
-    gulp.src(['index.html', 'resources/**/*.js'])
+    gulp.src(['index.html', 'assets/**/*.*'])
         .pipe(watch(['index.html']))
         //.pipe(debug({verbose: true}))
         .pipe(connect.reload());
