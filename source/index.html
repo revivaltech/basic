@@ -11,15 +11,106 @@
 
 	<!-- CSS FILES -->
 	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/bigvideo/css/bigvideo.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/videojs/video-js.css" rel="stylesheet" type="text/css" />
+  <link href="assets/plugins/headline/style.css" rel="stylesheet" type="text/css" />
+ 
+  <link rel="stylesheet" type="text/css" href="assets/plugins/3dhovereffects/css/style1.css" />
+
+	<link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href="http://roboto-webfont.googlecode.com/svn/trunk/roboto.all.css" rel="stylesheet" type="text/css">
 	
 
 </head>
 <body>
-<h1>Hello our first theme model !......</h1>
+    <!-- Begin page content -->
+    <div class="main">
+
+
+    <nav class="navbar navbar-custom">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="assets/images/logo.png"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    <div class="container">
+      <div class="page-header">
+                <section class="cd-intro">
+    <h3 class="cd-headline letters type">
+      <span>My favourite food is</span> 
+      <span class="cd-words-wrapper waiting">
+        <b class="is-visible">Creativity</b>
+        <b>Quality</b>
+        <b>Luxury</b>
+      </span>
+    </h3>
+  </section> <!-- cd-intro -->
+      </div>
+      <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p>
+      <p>Use <a href="../sticky-footer-navbar">the sticky footer with a fixed navbar</a> if need be, too.</p>
+
+    </div>
+
+
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer>
+    </div>
 
 
 <!-- JAVASCRIPT FILES -->
+
 <script type="text/javascript" src="assets/js/jquery/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="assets/plugins/videojs/video.js"></script>
+<script type="text/javascript" src="assets/js/jquery/jquery-ui.min.js"></script>
 <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/plugins/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bigvideo/lib/bigvideo.js"></script>
+<script type="text/javascript" src="assets/plugins/headline/main.js"></script>
+
+
+<script type="text/javascript">
+
+var BV;
+	
+	$(function() {
+    var BV = new $.BigVideo();
+    BV.init();
+    //BV.show('http://vjs.zencdn.net/v/oceans.mp4');
+    BV.show('assets/videos/realestateindustry.mp4');
+    //BV.getPlayer().pause();
+});
+</script>
 </body>
 </html>
